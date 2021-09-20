@@ -1,0 +1,16 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<h2>Your IP is: {{ ip }}</h2><br>
+
+<p>{{ lst[0] }}</p>
+{% for i in lst %}
+    <h3>{{ i }} {{ ip }}</h3>
+{% endfor %}
+
+</body>
+</html>
