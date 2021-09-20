@@ -6,12 +6,17 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     hw = "Hello world"
-    lst = ["111", "222", "333"]
-    return render_template("base.html", ip=hw, lst=lst)
+    names = ["Trinity", "Morpheus", "Dozer", "Epoch", "Sypher", "Tank"]
+    return render_template("base.html", hello=hw, names=names)
 
 
-@app.route("/js", methods=["GET"])
-def js():
+@app.route('/<message>', methods=["GET"])
+def func(message):
+    return jsonify({"message": message})
+
+
+@app.route("/ip", methods=["GET"])
+def ip():
     ip = request.remote_addr
     return jsonify({'ip': ip}), 200
 

@@ -5,12 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-<h2>Your IP is: {{ ip }}</h2><br>
-
-<p>{{ lst[0] }}</p>
-{% for i in lst %}
-    <h3>{{ i }} {{ ip }}</h3>
+<p align="center"><img src="static/agent.jpg" alt="smth"></p>
+<h2 align="center">Hello mr. Anderson, we found all your friends:</h2>
+<p align="center"><strong>We got:</strong> {% for name in names %}
+{{ name }}
 {% endfor %}
-
+</p>
 </body>
 </html>
